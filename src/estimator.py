@@ -27,8 +27,8 @@ def estimator(data):
   twopercentInfections_best = (2 * (infectionsByRequestedTime_best/100))
   twopercentInfections_severe = (2 * (infectionsByRequestedTime_severe/100))
 
-  treasury_best = (infectionsByRequestedTime_best * data['avgDailyIncomePopulation'] * data['avgDailyIncomeInUSD'])/days
-  treasury_severe = (infectionsByRequestedTime_severe * data['avgDailyIncomePopulation'] * data['avgDailyIncomeInUSD'])/days
+  treasury_best = (infectionsByRequestedTime_best * data['region']['avgDailyIncomePopulation'] * data['region']['avgDailyIncomeInUSD'])/days
+  treasury_severe = (infectionsByRequestedTime_severe * data['region']['avgDailyIncomePopulation'] * data['region']['avgDailyIncomeInUSD'])/days
   
   data = {
     'data': data,
