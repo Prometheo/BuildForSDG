@@ -22,10 +22,10 @@ def estimator(data):
   hospitalBedsByRequestedTime_severe = bedAvailablePercent - severeCasesByRequestedTime_severe
 
   fivePercentInfections_best = (5 * (infectionsByRequestedTime_best/100))
-  fivePercentInfections_severe = (5 * (infectionsByRequestedTime_best/100))
+  fivePercentInfections_severe = (5 * (infectionsByRequestedTime_severe/100))
 
   twopercentInfections_best = (2 * (infectionsByRequestedTime_best/100))
-  twopercentInfections_severe = (2 * (infectionsByRequestedTime_best/100))
+  twopercentInfections_severe = (2 * (infectionsByRequestedTime_severe/100))
 
   treasury_best = (infectionsByRequestedTime_best * 0.71 * 5)/days
   treasury_severe = (infectionsByRequestedTime_severe * 0.71 * 5)/days
