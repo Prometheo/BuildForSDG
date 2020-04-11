@@ -14,7 +14,7 @@ def estimator(data):
   infectionsByRequestedTime_severe = currentlyInfected_severe * (2**factor)
 
   severeCasesByRequestedTime_best = int(15 * (infectionsByRequestedTime_best/100))
-  severeCasesByRequestedTime_severe = int(15 * (infectionsByRequestedTime_best/100))
+  severeCasesByRequestedTime_severe = int(15 * (infectionsByRequestedTime_severe/100))
 
   bedAvailablePercent = int(35*(data['totalHospitalBeds']/100))
   hospitalBedsByRequestedTime_best = bedAvailablePercent - severeCasesByRequestedTime_best
