@@ -13,6 +13,7 @@ def estimator(data):
   infectionsByRequestedTime_best = currentlyInfected_best * (2**factor)
   infectionsByRequestedTime_severe = currentlyInfected_severe * (2**factor)
 
+
   severeCasesByRequestedTime_best = (15 * (infectionsByRequestedTime_best/100))
   severeCasesByRequestedTime_severe = (15 * (infectionsByRequestedTime_severe/100))
 
