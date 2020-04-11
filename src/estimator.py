@@ -3,13 +3,13 @@ def estimator(data):
   currentlyInfected_severe = data['reportedCases'] * 50
   if data['periodType'] == 'days':
     days = data['timeToElapse']
-    factor = (days/3)
+    factor = int(days/3)
   elif  data['periodType'] == 'weeks':
     days = data['timeToElapse']*7
-    factor = (days/3)
+    factor = int(days/3)
   else:
     days = data['timeToElapse']*30
-    factor = (days/3)
+    factor = int(days/3)
   infectionsByRequestedTime_best = currentlyInfected_best * (2**factor)
   infectionsByRequestedTime_severe = currentlyInfected_severe * (2**factor)
 
