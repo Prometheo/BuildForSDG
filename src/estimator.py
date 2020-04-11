@@ -27,8 +27,8 @@ def estimator(data):
   twopercentInfections_best = (2 * (infectionsByRequestedTime_best/100))
   twopercentInfections_severe = (2 * (infectionsByRequestedTime_best/100))
 
-  treasury_best = (infectionsByRequestedTime_best * 0.71 * 5 * days)
-  treasury_severe = (infectionsByRequestedTime_severe * 0.71 * 5 * days)
+  treasury_best = (infectionsByRequestedTime_best * 0.71 * 5)/days
+  treasury_severe = (infectionsByRequestedTime_severe * 0.71 * 5)/days
   
   data = {
     'data': data,
